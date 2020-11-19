@@ -1,0 +1,341 @@
+body{
+	padding: 0;
+	margin: 0;
+	/* overflow-x: hidden; */
+}	
+
+.ourNavbar p.navbar-brand{
+	background: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;  
+	margin-bottom: 0;
+}
+
+
+.ourNavbar img{
+	width: 100px;
+	height: 50px;
+}
+
+	
+
+
+
+/* .navbar .navbar-nav .nav-item{
+	text-align: center;
+}  */
+
+.navbar .navbar-nav .nav-item .nav-link{
+	color: white;
+	transition: 0.3s color;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active{
+	color: #f97252;
+}
+
+
+.navbar .navbar-nav .nav-item:hover .nav-link{
+	color: #f97252;
+}
+
+
+/* .navigationForm{
+	text-align: center;
+} */
+
+
+.form-control:focus {    
+    border-color: rgb(244,148,3);    
+    box-shadow: none;
+}
+
+.form-control.mySearchBar{	
+	border-radius: 20px;
+}
+
+.searchIconContainer{
+	color: white;
+	background-color: #f97252;
+	background-image: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+
+	border: 0;
+	outline: 0;
+	border-radius: 20px;
+}
+
+.navbar .navbar-toggler{
+	outline: none;
+	border-color: #F69A03;
+	
+}
+
+#menuButton{
+	background: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+.ourHeader{
+	/* background: url('https://www.collegesearch.in/upload/institute/images/large/190326050543_735961-iim-a-020718.jpg') no-repeat; */
+	background-color: #c73cff;
+	background-image: linear-gradient(0deg, #c73cff 0%, #4b5ca0 50%, #4b5ca0 100%);
+
+	background-size: cover;
+	min-height: 400px;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	border-bottom-left-radius: 30%;
+	border-bottom-right-radius: 30%;
+	transition: 0.5s all;
+}
+
+
+.reduceHeaderHeight{
+	min-height: 200px;
+}
+
+#findButton{
+	
+	background-image: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	background-color: #F69A03;
+	color: white; 
+}
+
+.headerSelections{
+	outline: none;
+}
+
+
+.jumbotron .form-inline .form-control{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.questionDetails{
+	text-align: center;
+	color: white;
+	opacity: 0;
+	transition: 2s all;
+}
+
+.questionDetailsVisible{
+	opacity: 1;
+}
+
+
+
+.answerInputLabel{
+	display: block;
+	min-width: 100px;
+	max-width: 300px;
+	padding: 5px 15px;
+	text-align: center;	
+	margin-left: auto;
+	margin-right: auto;	
+	border: 1px solid grey;
+	color: grey;
+	border-radius: 20px;
+	background-color: white;
+	background-image: linear-gradient(#fff, #fff);
+	transition: 0.2s all;
+}
+
+.answerInputLabel:hover{
+	color: white;
+	background-image: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	border-color: #ed5294;
+	/* background-color: #F69A03; */
+}
+
+.nextButtonContainer{
+	margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+
+}
+
+
+.buttonStyle{
+	color: #ed5294;
+	padding: 5px 12px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+	background-color: white;
+	background-image: linear-gradient(#fff, #fff);
+	transition: 0.2s all;
+}
+
+#reloadButton{
+	outline: none;
+}
+
+#reloadButton .fa-redo-alt{
+	padding: 5px;
+}
+
+#nextButton{
+	border-radius: 50%;
+	outline: none;
+}
+
+
+.nextButtonContainer .buttonStyle:hover{
+	color: white;
+	background-image: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	border-color: #ed5294;
+}
+
+.answerInputDot:checked + .answerInputLabel{
+	color: white;
+	background-image: linear-gradient(90deg, #f97252 0%, #f36174 50%, #ed5294 100%);
+	border-color: #ed5294;
+}
+
+
+.optionContainer{
+	margin-bottom: 50px;
+}
+
+
+.answerInputDot{
+	width: 0;
+	opacity: 0;
+	position: fixed;
+}
+
+
+
+.resultContainer{
+	text-align: center;
+	font-size: 30px;
+}
+
+.yellow{
+	color: yellow;
+}
+
+.infoSection h2{
+	text-align: center;
+}
+
+.infoSection div div{
+	padding: 30px;
+}
+
+.infoSectionImage{
+	width: 400px;
+	height: 200px;
+}
+
+#stepsList{
+	list-style-type: none;
+	line-height: 4em;
+	vertical-align: middle;
+	white-space: nowrap;	
+	padding-left: 0;
+}
+
+
+
+
+#stepsList .itemNumber{
+	color: #7451C0;
+	border-radius: 50%;
+	border: 2px solid #7451C0;
+	padding: 10px;		
+	padding-left: 18px;
+	padding-right: 18px;
+	margin-right: 10px;
+}
+
+
+.flexBoxContainer{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.aboutSection{
+	background: url('../images/about-back.jpg') no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	min-height: 100vh;
+}
+
+.aboutContainer{
+		
+	background-color: white;	
+	width: 500px;
+	margin-right: 40px;	
+	box-shadow: 4px 4px 25px 0 rgba(0, 0, 0, 0.5);
+	padding-bottom: 0;
+}
+
+.aboutContainer .aboutText{
+	padding: 50px;
+
+}
+
+.aboutContainer h2{
+	
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+
+.aboutContainer p{
+	text-align: justify;	
+}
+
+
+.aboutSpans{
+	display: inline-block;
+	width: 25%;
+	height: 3px;
+	background-color: black;
+	float: left;
+}
+
+.firstSpanAbout{
+	background-color: red;
+}
+
+.secondSpanAbout{
+	background-color: #f97252;
+}
+
+.thirdSpanAbout{
+	background-color: teal;
+}
+
+
+.fourthSpanAbout{
+	background-color: orange;
+}
+
+
+
+.hideMe{
+	display: none;
+}
+
+
+@media (min-width: 992px){
+	.form-control{
+		margin-left: 20px;
+	}
+
+	
+}
+
+@media (min-width: 576px){
+	.searchIconContainer{
+		margin-left: 10px;
+	}
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizo'Mania - Test your knowledge</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/cb4f145e9f.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
+</head>
+<body>
+
+	<nav class="navbar ourNavbar navbar-expand-md navbar-light bg-dark" id="navbar_top">		
+		<img src="images/orange-logo.png" class="navbar-brand">	
+		<p class="navbar-brand">Quizo'Mania</p>	
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle Navigation">
+			<i class="fas fa-hamburger" id="menuButton"></i>		
+		</button>
+
+		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link" href="#aboutSectionAnchor">About</a>				
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Content</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0 navigationForm">
+				<input type="search" name="search" class="form-control mySearchBar" placeholder="Search...">
+				<button class="btn form-control searchIconContainer my-2 my-sm-0"><i class="fas fa-search searchIcon"></i></button>
+			</form>
+		</div>
+	</nav>
+
+	<header class="jumbotron ourHeader row-fluid">
+		<form class="form-inline form-group row-fluid justify-content-center align-self-center col-sm-12" id="userSelectForm">
+			<select class="mx-sm-2 form-control headerSelections col-sm-3" id="categorySelector" required>
+				<option disabled selected value="">Select Category</option>
+				<option value="9">General Knowledge</option>
+				<option value="10">Entertainment: Books</option>
+				<option value="11">Entertainment: Film</option>
+				<option value="12">Entertainment: Music</option>
+				<option value="13">Entertainment: Musicals &amp; Theatres</option>
+				<option value="14">Entertainment: Television</option>
+				<option value="15">Entertainment: Video Games</option>
+				<option value="16">Entertainment: Board Games</option>
+				<option value="17">Science &amp; Nature</option>
+				<option value="18">Science: Computers</option>
+				<option value="19">Science: Mathematics</option>
+				<option value="20">Mythology</option>
+				<option value="21">Sports</option>
+				<option value="22">Geography</option>
+				<option value="23">History</option>
+				<option value="24">Politics</option>
+				<option value="25">Art</option>
+				<option value="26">Celebrities</option>
+				<option value="27">Animals</option>
+				<option value="28">Vehicles</option>
+				<option value="29">Entertainment: Comics</option>
+				<option value="30">Science: Gadgets</option>
+				<option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+				<option value="32">Entertainment: Cartoon &amp; Animations</option>
+			</select>
+			<select class="mx-sm-2 form-control headerSelections col-sm-3" id="difficultySelector" required="true">
+				<option disabled selected value="">Select Difficulty</option>
+				<option value="easy">Easy</option>
+				<option value="medium">Medium</option>
+				<option value="hard">Hard</option>
+			</select>
+			<input type="submit" class="form-control btn mx-sm-2 col-sm-3" value="Let's Go" id="findButton">					
+		</form>	
+
+		<div class="questionDetails justify-content-center align-self-center col-sm-12 hideMe">
+			<h3>Question No. <span id="questionNumber"></span></h3>
+			<p id="questionStatement">Lorem ipsum pariatur ad sit labore enim eiusmod ad dolor exercitation incididunt anim in fugiat quis magna dolore.</p>
+			<div class="resultContainer hideMe">				
+					<p id="resultFeedBack"></p>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<div class="nextButtonContainer">
+						<button type="button" id="reloadButton" class="buttonStyle">Retry<i class="fas fa-redo-alt"></i></button>
+					</div>								
+			</div>
+		</div>		
+	</header>
+
+	<div class="container-fluid optionContainer hideMe">
+		<div class="col-sm-12">
+			<form id="answerOptions">
+				<input class="answerInputDot" id="option1" type="radio" name="answer">
+				<label for="option1" class="answerInputLabel">Text</label>
+				<input class="answerInputDot" id="option2" type="radio" name="answer">
+				<label for="option2" class="answerInputLabel">Text</label>
+				<input class="answerInputDot" id="option3" type="radio" name="answer">
+				<label for="option3" class="answerInputLabel">Text</label>
+				<input class="answerInputDot" id="option4" type="radio" name="answer">
+				<label for="option4" class="answerInputLabel">Text</label>
+			</form>
+			<div class="nextButtonContainer">
+				<button type="button" class="buttonStyle" id="nextButton"><i class="fas fa-arrow-right"></i></button>
+			</div>			
+		</div>		
+	</div>
+	
+
+	<div class="container">
+		<div class="infoSection">
+			<h2>Test your knowledge</h2>
+			<div class="row">
+				<div class="col-md-6 col-sm-12">
+					<p>Do you think you know enough about what's going on in this wolrd? Do you want to test your knowledge about various fields? Then take our quiz. We have different categories covering different fields of interests that a person might have. Try our quiz in simple steps.</p>
+					<img src="images/screenshotContainer.png" class="infoSectionImage img-fluid">
+
+				</div>
+				<div class="col-md-6 col-sm-12">
+					<ul id="stepsList">
+						<li><span class="itemNumber">1</span>Choose a category of your interest.</li>
+						<li><span class="itemNumber">2</span>Set the difficulty level.</li>
+						<li><span class="itemNumber">3</span>Get ready to answer some really interestng questions.</li>
+						<li><span class="itemNumber">4</span>Choose the right option for every question and then submit.</li>
+						<li><span class="itemNumber">5</span>You'll get the results at the end.</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>		
+	</div>
+
+	
+	<div class="aboutSection flexBoxContainer" id="aboutSectionAnchor">
+
+		<div class="aboutContainer flexItem">
+			<span class="aboutSpans firstSpanAbout"></span>
+			<span class="aboutSpans secondSpanAbout"></span>
+			<span class="aboutSpans thirdSpanAbout"></span>
+			<span class="aboutSpans fourthSpanAbout"></span>
+			<div class="aboutText">
+				<h2>About us.</h2>
+				<p>This project is made with love by a third year engineering student who is trying to improve his skills working with HTMl, CSS, JS and boostrap to lead his life to great oppurtunities. This project is made to test someone's knowledge about a particular topic or interest. I made this web-application as a college project. I might also make some improvements later on.</p>
+				<p>The greatest lesson I learnt in my life is we learn things only when we try learning them with some practical uses.</p>
+			</div>
+			<span class="aboutSpans fourthSpanAbout"></span>
+			<span class="aboutSpans thirdSpanAbout"></span>			
+			<span class="aboutSpans secondSpanAbout"></span>
+			<span class="aboutSpans firstSpanAbout"></span>
+			
+			
+		</div>
+
+
+	</div>
+	
+
+
+</body>
+<script type="text/javascript" src="js/scripts.js"></script>
+</html>
