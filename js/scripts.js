@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	nextButton = document.getElementById('nextButton');
 
 	ourForm.addEventListener('submit', function (event){
-		console.log('hello');
+
 		event.preventDefault();		
 		prepareTheView();
 		startTheQuiz();		
@@ -96,8 +96,9 @@ function answerIsTrue(correct_answer){
 	}
 
 	let selectedAnswer = selected.nextElementSibling.innerText;
-	console.log(selectedAnswer, correct_answer);
-	return selectedAnswer === correct_answer;
+	let tempPara = document.createElement('p');
+	tempPara.innerHTML = correct_answer;	
+	return selectedAnswer === tempPara.innerText;
 
 }
 
