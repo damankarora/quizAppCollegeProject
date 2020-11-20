@@ -320,10 +320,75 @@ body{
 }
 
 
+#contactUsSection{
+	margin-top: 30px;
+}
+
+
+#contactUsSection h2{
+	text-align: center;
+}
+
+
 
 .hideMe{
 	display: none;
 }
+
+
+#contactUsSection{
+	text-align: center;
+}
+
+.iconContainer{
+	margin-top: 30px;		
+}
+
+.iconContainer a{
+	color: black;
+}
+
+.iconContainer a:hover{
+	text-decoration: none;
+}
+
+
+.iconContainer .fas, .iconContainer .fab{
+	font-size: 30px;
+	font-weight: 400;
+	transition: 0.2s all;
+}
+
+
+.iconContainer:hover .fa-instagram, .iconContainer:hover .fa-instagram + p{
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-color: #4158D0;
+	background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+	font-weight: bold;
+
+}
+
+.iconContainer:hover .fa-linkedin, .iconContainer:hover .fa-linkedin + p{
+	color: #0A66C2;
+	font-weight: bold;
+}
+
+.iconContainer:hover .fa-whatsapp, .iconContainer:hover .fa-whatsapp + p{
+	color: #4EC25A;
+	font-weight: bold;
+}
+
+
+.iconContainer:hover .fa-envelope, .iconContainer:hover .fa-envelope + p{
+	color: #D03235;
+	font-weight: bold;
+
+}
+
+
+
+
 
 
 @media (min-width: 992px){
